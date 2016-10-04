@@ -1198,10 +1198,6 @@ function initializeGame() {
 	entities[7].checkpoint = [1032,-358];
 	entities.push (new PushableEntity ( 20, 234 ) );
 	entities[8].checkpoint = [41,34];
-
-
-
-
 }
 
 
@@ -2077,40 +2073,25 @@ function endGame() {
 	
 }
 
-function winGame() {
-
-	
-
-}
-
 function restartGame() {
+	
+	var newCode = document.getElementById('levelCodeReinitialize').value;
 
-	player.lives = 3;
-	player.health = 3;
-	
-	// Resets gameOver variable, gravity and the presents to collect count
-	gameOver = false;
-	gravity = 0.3;
-	presentsToCollect = 4;
-	
-	// Clear "Game Over" text
-	textctx.clearRect(0,0, canvasWidth,canvasHeight);
-	
-	// Reset player position on the screen
-	player.initCheckpoint();
-	
-	
-	// Hide the restart textBox display
-	textBox.style.display = "none";
-	
-	// Remove everything from the boxes array, then re-initialize it
-	boxes = [];
-	initializeGame();
-	
+	if (newCode) {
+		// Reset player position on the screen
+		player.initCheckpoint();
+		
+		// Remove everything from the boxes array, then re-initialize it
+		boxes = [];
+		entities = [];
+
+		// Evaluate the code entered in the second box (probably not a great idea, but it works for now)
+		eval(newCode);
+	}
+
 }
 
 addControls();
-
 initializeGame();
 
 offsetX = Math.abs(player.checkpoint[0] - (canvasWidth / 2) );
