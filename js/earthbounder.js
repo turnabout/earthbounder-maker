@@ -66,7 +66,7 @@ consoleItems[7].innerHTML = "Y Offset";
 consoleItems[8].innerHTML = "X Offset";
 consoleItems[9].innerHTML = "Mouse X";
 consoleItems[10].innerHTML = "Mouse Y";
-// consoleItems[11].innerHTML = "Entities [0]";
+consoleItems[11].innerHTML = "Mouse Mode";
 // consoleItems[12].innerHTML = "Entities [1]";
 
 for ( var j = 0 ; j < 13 ; j++ ) {
@@ -733,9 +733,6 @@ function updateConsole() {
 	var cdata7 = document.getElementById("consoleData7");
 	var cdata8 = document.getElementById("consoleData8");
 
-
-
-	
 	cdata0.innerHTML = Math.floor(player.x);
 	cdata1.innerHTML = Math.floor(player.y);
 	cdata2.innerHTML = Math.floor( player.x + ( player.width / 2 ) ) + " , " + Math.floor( player.y + (player.height / 2) );
@@ -745,9 +742,6 @@ function updateConsole() {
 	cdata6.innerHTML = player.airborne;
 	cdata7.innerHTML = Math.round(-offsetY);
 	cdata8.innerHTML = Math.round(-offsetX);
-	
-
-	
 }
 
 
@@ -763,9 +757,15 @@ function updateConsole() {
 
 
 
-// Console spots in which the Mouse X - Y positions are stored
+// Console spots in which the Mouse X - Y positions are stored, and also the "mouse mode"
 var cdata9 = document.getElementById("consoleData9");
 var cdata10 = document.getElementById("consoleData10");
+var cdata11 = document.getElementById("consoleData11");
+
+// Initial mouse console data
+cdata9.innerHTML = '0';
+cdata10.innerHTML = '0';
+cdata11.innerHTML = 'Add';
 
 // Vertical and horizontal lock
 var verLock = false;
@@ -1628,19 +1628,22 @@ function addControls() {
 		
 		// 1
 		if (e.keyCode == 49) {
-			textCanvas.style.cursor = "url('images/cursor_add.png') 32 32"
+			textCanvas.style.cursor = "url('images/cursor_add.png') 32 32";
+			cdata11.innerHTML = 'Add';
 			editingMode = 1;
 		}
 		
 		// 2
 		if (e.keyCode == 50) {
-			textCanvas.style.cursor = "url('images/cursor_move.png') 32 32"
+			textCanvas.style.cursor = "url('images/cursor_move.png') 32 32";
+			cdata11.innerHTML = 'Move';
 			editingMode = 2;
 		}
 		
 		// 3
 		if (e.keyCode == 51) {
-			textCanvas.style.cursor = "url('images/cursor_delete.png') 32 32"
+			textCanvas.style.cursor = "url('images/cursor_delete.png') 32 32";
+			cdata11.innerHTML = 'Delete';
 			editingMode = 3;
 		}
 		
