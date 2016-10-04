@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html>
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 	<head>
 		<title>Earthbounder</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,23 +7,15 @@
 	</head>
 	
 	<body>
-	
 		<div id="header"></div>
 		
 		<div id="pageblock">
 			
 			<div id="canvasContainer">
 			
-		
-			
-			
-			
-			
-			
 				<canvas width="750" height="580" id="background"></canvas>
 				<canvas width="750" height="580" id="main"></canvas>
 				<canvas width="750" height="580" id="text"></canvas>
-					
 					
 				<div id="debug"></div>
 				
@@ -50,19 +42,22 @@
 						
 						<option value="" disabled>--OTHERS--</option>
 						<option value="p">Player</option>
-						
 					</select>
 					
 					<br><br><br><br>
 					
-					Level Code <br><br>
-					<textarea id="levelCode" rows="4" cols="30"></textarea><br>
-					<input type="button" value="Generate Code" onclick="getLevelCode();"/>
-						
-				</div>
-					
-				<div id="textBox">
-					<div id="restart"><a href="#" onclick="restartGame();">RECOMMENCER</a></div>
+					<div class="code-box">
+						Level Code <br><br>
+						<textarea id="levelCode" rows="4" cols="30"></textarea><br>
+						<input type="button" value="Generate Code" onclick="getLevelCode();"/>
+					</div>
+
+					<div class="code-box">
+						Enter Your Code <br><br>
+						<textarea id="levelCodeReinitialize" rows="4" cols="30"></textarea><br>
+						<input type="button" value="Load Code" onclick="restartGame();"/>
+					</div>
+
 				</div>
 				
 			</div>
@@ -72,5 +67,4 @@
 		<script src="js/earthbounder.js"></script>
 		
 	</body>
-	
 </html>
