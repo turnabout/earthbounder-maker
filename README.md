@@ -1,6 +1,6 @@
 # Earthbounder Maker
 
-Tool I made for me to create levels for my game, "[Earthbounder](http://kevinpageau.com/earthbounder)". Move entities around and click on "Generate Code".
+Tool I made to create levels for my game, "[Earthbounder](http://kevinpageau.com/earthbounder)". Move entities around and click on "Generate Code".
 
 Created sometime in 2014.
 
