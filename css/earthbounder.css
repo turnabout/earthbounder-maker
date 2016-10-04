@@ -1,0 +1,246 @@
+/* Font */
+
+@font-face {
+    font-family: 'pixelmixregular';
+    src: url('../font/pixelmix-webfont.eot');
+    src: url('../font/pixelmix-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/pixelmix-webfont.woff') format('woff'),
+         url('../font/pixelmix-webfont.ttf') format('truetype'),
+         url('../font/pixelmix-webfont.svg#pixelmixregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* General */
+
+body{
+	color:white;
+	background:url('../images/ebbg.png');
+	font-family:'pixelmixregular';
+}
+
+
+a{
+	color:white;
+	text-decoration:none;
+}
+
+
+#pageblock{
+	width:786px;
+	height:616px;
+	margin-left:auto;
+	margin-right:auto;
+	background:url('../images/frame.png');
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	position:relative;
+}
+
+#return{
+	width:187px;
+	height:85px;
+	background:url('../images/textbox_short.png');
+	position:absolute;
+	left:15px;
+	top:15px;
+	font-size:0.8em;
+	text-align:left;
+}
+
+#return p {
+	width:80%;
+	margin-left:20px;
+}
+
+#return img{
+	position:absolute;
+	left:78px;
+	bottom:27px;
+}
+
+* {
+	-webkit-user-select:none;
+	cursor: url('../images/cursor.png');
+}
+
+#levelCode{
+	-webkit-user-select:text;
+}
+
+
+
+/* Header */
+
+#header{
+	width:587px;
+	height:184px;
+	margin:auto;
+	background:url('../images/header.png');
+}
+
+
+
+/* Canvas */
+
+#canvasContainer {
+	width:850px;
+	text-align:center;
+	margin:auto;
+	position:absolute;
+	left:18px;
+	top:18px;
+}
+			
+canvas {
+	position:absolute;
+	left:0;
+	top:0;
+	margin:auto;
+	cursor: url('../images/cursor.png'), pointer;
+}
+
+
+#text{
+	cursor: url('../images/cursor_add.png');
+}
+
+
+
+/* Debug Console */
+
+#debug {
+	width:350px;
+	height:585px;
+	border:1px solid black;
+	position:absolute;
+	left:-380px;
+	top:0px;
+	color:white;
+	background:black;
+	font-size:13px;
+}
+
+#debug ul {
+	margin-top:50px;
+}
+
+
+/* Intro Screen */
+
+#intro{
+	position:absolute;
+	left:0;
+	right:0;
+	width:750px;
+	height:580px;
+	background:black;
+	z-index:2;
+	display:block;
+}
+
+#introtext1{
+	position:absolute;
+	left:330px;
+	top:100px;
+	width:370px;
+	height:85px;
+	background:url('../images/textbox_small.png');
+}
+
+#introtext1 p{
+	position:absolute;
+	left:25px;
+}
+
+
+#introtext2{
+	position:absolute;
+	left:130px;
+	top:100px;
+	width:187px;
+	height:85px;
+	
+	background:url('../images/textbox_short.png');
+}
+
+#introtext2 input {
+	width:75px;
+	border-radius:2px;
+	position:absolute;
+	left:25px;
+}
+
+
+
+#ness{
+	position:absolute;
+	left:70px;
+	top:120px;
+}
+
+#playbutton{
+	border:2px solid white;
+	width:100px;
+	height:30px;
+	position:absolute;
+	top:500px;
+	left:0;
+	right:0;
+	margin:auto;
+	padding-top:10px;
+	padding-bottom:-92px;
+	background:black;
+}
+
+#instructions{
+	width:500px;
+	height:230px;
+	background:url('../images/instructions.png');
+	position:absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top:250px
+}
+
+
+
+
+/* Game Over Restart Screen */
+
+#textBox{
+	position:absolute;
+	width:370px;
+	height:110px;
+	background:url('../images/textbox.png');
+	left:0px;
+	right:100px;
+	margin:auto;
+	margin-top:400px;
+	display:none;
+}
+
+#restart{
+	height:20px;
+	left:0;
+	right:0;
+	margin:auto;
+	margin-top:45px;
+}
+
+
+/* Map Editor Tools */
+
+#mapEditor{
+	width:350px;
+	height:585px;
+	border:1px solid black;
+	position:absolute;
+	right:-300px;
+	top:0px;
+	color:white;
+	background:black;
+	font-size:13px;
+}
+

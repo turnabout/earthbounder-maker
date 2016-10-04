@@ -1,0 +1,123 @@
+<html>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+	<head>
+		<title>Test</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="css/main.css" type="text/css" rel="stylesheet"/>
+	</head>
+	
+	<body>
+	
+		<img id="zaki" src="images/zaki.jpg"/>
+		<input type="button" value="Object test" onclick="checkReady();"/>
+	
+		<script type="text/javascript">
+		
+		// created object debug method
+		if (!Object.prototype.debug) {
+			Object.prototype.debug = function() {
+				var text = "Object {\n";
+				
+				for (var i in this) {
+					if (i !== "debug") {
+						text += " [ " + i + "] ¬ " + this[i] + "\n";
+					}
+				}
+				alert(text + "}");
+			};
+		}
+		
+	/* OLD IMAGES APPROACH
+	// IMAGES //
+	// background image
+	var bgReady = false;
+	var bgImage = new Image();
+	bgImage.onload = function() {
+		bgReady = true;
+	};
+	bgImage.src = "images/background1.png";
+				
+				
+
+	// hero image
+	var heroReady = false;
+	var heroImage = new Image();
+	heroImage.onload = function() {
+		heroReady = true;
+	};
+	heroImage.src = "images/hero.png";
+
+
+	// enemy image
+	var enemyReady = false;
+	var enemyImage = new Image();
+	enemyImage.onload = function() {
+		enemyReady = true;
+	};
+	enemyImage.src = "images/enemy.png";
+	*/
+
+	var canvas = document.createElement("canvas");
+	var ctx = canvas.getContext("2d");
+	canvas.width = 500;
+	canvas.height = 500;
+	document.body.appendChild(canvas);
+	
+	
+	// prototype template to be used for canvas images
+	function CanvasImage(imgSource) {
+		// used so image is not rendered until loaded
+		this.ready = false;
+		this.image = new Image();
+		this.image.src = imgSource;
+		
+		// method used to tell when image is ready
+		this.loaded = function() {
+			this.ready = true;
+		};
+		
+	}
+			
+			
+	var zaki = new CanvasImage("images/zaki.jpg");
+	zaki.debug();
+	zaki.image.onload = function() {
+		zaki.ready = true;
+	}
+	
+	alert(zaki.image.src);
+	
+	
+	
+	function checkReady() {
+		alert(zaki.ready);
+		zaki.debug();
+
+	}
+	
+	
+	
+	
+	var canvas = document.createElement("canvas");
+	var ctx = canvas.getContext("2d");
+	
+	var render = function () {
+		if (zaki.ready) {
+			ctx.drawImage(bgImage, 0, 0);
+		};
+
+
+	// Score
+	ctx.fillStyle = "rgb(250, 250, 250)";
+	ctx.font = "24px Helvetica";
+	ctx.textAlign = "left";
+	ctx.textBaseline = "top";
+	ctx.fillText("Goblins caught: " + monstersCaught, 32, 32);
+	};
+	
+
+	
+		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,76 @@
+<html>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+	<head>
+		<title>Earthbounder</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="css/earthbounder.css" type="text/css" rel="stylesheet"/>
+	</head>
+	
+	<body>
+	
+		<div id="header"></div>
+		
+		<div id="pageblock">
+			
+			<div id="canvasContainer">
+			
+		
+			
+			
+			
+			
+			
+				<canvas width="750" height="580" id="background"></canvas>
+				<canvas width="750" height="580" id="main"></canvas>
+				<canvas width="750" height="580" id="text"></canvas>
+					
+					
+				<div id="debug"></div>
+				
+				<div id="mapEditor">
+				
+					<br>Toolbar <br><br>
+				
+					<label for="itemType">Item Type</label>
+				
+					<select name="itemType" id="itemType" onchange="getCurrentItemToAdd();">
+						<option value="" disabled>--PLATFORMS--</option>
+						
+						<option value="p1">Regular</option>
+						<option value="p2">Small</option>
+						<option value="p3">Large</option>
+						<option value="p4">Larger</option>
+						<option value="p5">Bouncy</option>
+						
+						<option value="" disabled>--COLLECTIBLES--</option>
+						<option value="c1">Present</option>
+						
+						<option value="" disabled>--ENTITIES--</option>
+						<option value="e1">Pushable</option>
+						
+						<option value="" disabled>--OTHERS--</option>
+						<option value="p">Player</option>
+						
+					</select>
+					
+					<br><br><br><br>
+					
+					Level Code <br><br>
+					<textarea id="levelCode" rows="4" cols="30"></textarea><br>
+					<input type="button" value="Generate Code" onclick="getLevelCode();"/>
+						
+				</div>
+					
+				<div id="textBox">
+					<div id="restart"><a href="#" onclick="restartGame();">RECOMMENCER</a></div>
+				</div>
+				
+			</div>
+			
+		</div>
+			
+		<script src="js/earthbounder.js"></script>
+		
+	</body>
+	
+</html>
