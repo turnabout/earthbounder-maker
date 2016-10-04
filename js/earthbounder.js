@@ -241,7 +241,7 @@ var imageRepository = new function() {
 var Sounds =  {
 	
 	// Music
-	moon : new Audio("audio/_moon.wav"),
+	// moon : new Audio("audio/_moon.wav"),
 	
 	// Sound effects
 	hit : new Audio("audio/hit.wav"),
@@ -264,7 +264,7 @@ Sounds.itemGet2.volume = 0.3;
 Sounds.jump.volume = 0.6;
 Sounds.bounce.volume = 0.6;
 	
-Sounds.moon.loop = true;
+// Sounds.moon.loop = true;
 //Sounds.moon.play();
 
 
