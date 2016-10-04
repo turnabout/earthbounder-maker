@@ -232,17 +232,12 @@ var imageRepository = new function() {
 
 	
 };
-	
-	
+
+
 
 /*** SOUNDS ***/
-	
-	
+
 var Sounds =  {
-	
-	// Music
-	// moon : new Audio("audio/_moon.wav"),
-	
 	// Sound effects
 	hit : new Audio("audio/hit.wav"),
 	yell : new Audio("audio/yell.wav"),
@@ -250,29 +245,19 @@ var Sounds =  {
 	itemGet2 : new Audio("audio/itemget2.wav"),
 	jump : new Audio("audio/jump.wav"),
 	bounce : new Audio("audio/bounce.wav"),
-	
-	
 };
 
 // Change all sound effects and music volume
 
-Sounds.moon.volume = 0.4;
 Sounds.hit.volume = 0.5;
 Sounds.yell.volume = 0.5;
 Sounds.itemGet1.volume = 0.3;
 Sounds.itemGet2.volume = 0.3;
 Sounds.jump.volume = 0.6;
 Sounds.bounce.volume = 0.6;
-	
-// Sounds.moon.loop = true;
-//Sounds.moon.play();
 
 
-	
-	
-	
-	
-	
+
 /*** GENERAL VARIABLES ***/
 
 // Get canvas elements, contexts & dimensions
